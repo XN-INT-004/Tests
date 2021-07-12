@@ -29,6 +29,20 @@ public class Class1 {
 	    WebElement login1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div"));
 	    boolean d = login.isEnabled();
 	    System.out.println(d);
+		
+	    String expectedHeading1 = "Increase your productivity";
+    	    String heading1 = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/span[2]")).getText();
+    	    if(expectedHeading1.equalsIgnoreCase(heading1))
+          	System.out.println("The expected text is same as actual text --- "+heading1);
+    	    else
+          	System.out.println("The expected text doesn't match the actual text --- "+heading1);
+    	
+    	    String expectedHeading2 = "Best Todo list application for fast world";
+    	    String heading2 = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[1]")).getText();
+    	    if(expectedHeading2.equalsIgnoreCase(heading2))
+          	System.out.println("The expected text is same as actual text --- "+heading2);
+    	    else
+          	System.out.println("The expected text doesn't match the actual text --- "+heading2);	
 	    
    
 
